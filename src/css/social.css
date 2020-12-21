@@ -1,0 +1,39 @@
+.social {
+
+	display: flex;
+	margin: -12px 0;
+	justify-content: center;
+
+	&__item {
+
+		margin: 12px;
+
+	}
+
+	&__link {
+
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: block;
+
+		@media ($desktop) {
+
+			&:hover svg {
+
+				fill: var(--text);
+
+			}
+
+		}
+
+		svg {
+
+			fill: var(--color);
+			border-radius: 50%;
+
+		}
+
+	}
+
+}

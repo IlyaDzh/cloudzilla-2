@@ -1,0 +1,21 @@
+:root {
+
+	--color: #fff;
+	--black: #181818;
+	--text: color(var(--color) a(60%));
+	--error: #dc2626;
+	--bg: #0c4a6e;
+	--blue: #0891b2;
+	--grey: #a3a3a3;
+	--green: #30b6b6;
+	--red: #dc2626;
+	--yellow: #facc15;
+	--linear: linear-gradient(94.86deg, #000000 3.01%, #0C4A6E 95.1%);;
+	--transitionDefault: .3s;
+
+}
+
+$desktop: (min-width: 1200px);
+$mdWidth: (max-width: 1199px);
+$smWidth: (max-width: 767px);
+$xsWidth: (max-width: 359px);

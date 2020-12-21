@@ -1,0 +1,75 @@
+.btn,
+.button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: var(--transitionDefault);
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 0;
+	color: transparent;
+	text-align: center;
+	white-space: nowrap;
+	display: block;
+	flex-shrink: 0;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&:disabled {
+
+		pointer-events: none;
+		opacity: .3;
+
+	}
+
+}
+
+.btn {
+
+	padding: 0 36px;
+	height: 60px;
+	font-size: 16px;
+	line-height: 60px;
+	font-weight: 500;
+	border-radius: 6px;
+
+	@media ($desktop) {
+
+		&:hover {
+
+
+		}
+
+	}
+
+	&--yellow {
+
+		color: var(--black);
+		background-color: var(--yellow);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				/* background-color: #524BE0; */
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,73 @@
+{% set title = "Website is under construction" %}
+
+{% set description = "New version is coming soon. Please stay tuned!" %}
+
+{% set preloadImage = [
+	{
+		media: "(min-width: 1200px)",
+		img : "/img/bg.webp"
+	},
+	{
+		media: "(max-width: 767px)",
+		img : "/img/bg--mobile.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="landing">
+
+		<div class="landing__bg">
+
+			<picture>
+
+				<source srcset="/img/bg--mobile.webp" type="image/webp" media="(max-width: 360px)">
+				<source srcset="/img/bg--mobile.jpg" media="(max-width: 360px)">
+
+				<source srcset="/img/bg--tablet.webp" type="image/webp" media="(max-width: 768px)">
+				<source srcset="/img/bg--tablet.jpg" media="(max-width: 768px)">
+
+				<source srcset="/img/bg.webp 1x, /img/bg@2x.webp 2x" type="image/webp">
+				<source srcset="/img/bg.jpg 1x, /img/bg@2x.jpg 2x">
+
+				<img src="/img/bg.jpg" alt="" width="2800" height="740" loading="lazy">
+
+			</picture>
+
+		</div>
+
+		<div class="landing__content">
+
+			<div class="center">
+
+				<div class="landing__logo">
+
+					<img src="/img/logo.svg" width="218" height="40" alt="{{ site }}">
+
+				</div>
+
+				<h1 class="landing__title">
+					{{ title }}
+				</h1>
+
+				<p class="landing__text">
+					New version is coming soon. <br class="visible-sm">Please stay tuned!
+				</p>
+
+				<div class="landing__btn">
+
+					<a href="https://cloudzilla.ai/" class="btn btn--yellow">
+						Contact us
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+.footer {
+
+	flex-shrink: 0;
+	margin: 24px 0;
+	text-align: center;
+
+	.copyright {
+
+		color: var(--text);
+		font-size: 14px;
+		line-height: 18px;
+		margin: 20px 0 10px;
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+
+		}
+
+	}
+
+}
