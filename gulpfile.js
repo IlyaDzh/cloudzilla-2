@@ -35,7 +35,7 @@ const w3cjs = require("gulp-w3cjs");
 let config = null;
 
 const site = "CloudZilla";
-const domain = "cloudzilla.ai";
+const domain = "cloudzilla.wndrbase.com";
 
 try {
     config = require("./config.json");
@@ -140,19 +140,14 @@ gulp.task("css", function () {
 
 gulp.task("js", function () {
     return gulp
-        .src([
-            "src/js/*.min.js",
-            "src/js/js.js",
-            "src/js/*.js",
-            "!src/js/swiper.min.js"
-        ])
+        .src(["src/js/*.min.js", "src/js/js.js", "src/js/*.js"])
         .pipe(sourcemaps.init())
         .pipe(concat("scripts.js"))
-        .pipe(
-            babel({
-                presets: ["@babel/env"]
-            })
-        )
+        // .pipe(
+        //     babel({
+        //         presets: ["@babel/env"]
+        //     })
+        // )
         .pipe(sourcemaps.write())
         .pipe(
             minify({
@@ -212,6 +207,7 @@ gulp.task("ftp", function () {
 });
 
 gulp.task("watch", function () {
+    gulp.watch("src/js/*.*", gulp.series("js"));
     gulp.watch("src/css/*.*", gulp.series("css"));
     gulp.watch("src/**/index.html", gulp.series("html"));
     gulp.watch(["src/**/*.html", "!src/**/index.html"], gulp.series("html-touch"));
@@ -223,7 +219,7 @@ gulp.task(
     "default",
     gulp.series(
         "clear",
-        gulp.parallel("css"),
+        gulp.parallel("css", "js"),
         "html",
         "copy",
         gulp.parallel("ftp", "watch", "serve")

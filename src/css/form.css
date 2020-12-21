@@ -1,75 +1,81 @@
+input,
+button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .btn,
 .button {
 
-	border: 0;
-	border-radius: 0;
-	font-family: inherit;
-	background-color: transparent;
-	transition: var(--transitionDefault);
-	cursor: pointer;
-	user-select: none;
-	position: relative;
-	font-size: 0;
-	color: transparent;
-	text-align: center;
-	white-space: nowrap;
-	display: block;
-	flex-shrink: 0;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    background-color: transparent;
+    transition: var(--transitionDefault);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-size: 0;
+    color: transparent;
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    flex-shrink: 0;
 
-	&:focus {
+    &:focus {
 
-		outline: none;
+        outline: none;
 
-	}
+    }
 
-	&:hover {
+    &:hover {
 
-		cursor: pointer;
+        cursor: pointer;
 
-	}
+    }
 
-	&:disabled {
+    &:disabled {
 
-		pointer-events: none;
-		opacity: .3;
+        pointer-events: none;
+        opacity: .3;
 
-	}
+    }
 
 }
 
 .btn {
 
-	padding: 0 36px;
-	height: 60px;
-	font-size: 16px;
-	line-height: 60px;
-	font-weight: 500;
-	border-radius: 6px;
+    padding: 0 36px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: 500;
+    border-radius: 6px;
 
-	@media ($desktop) {
+    @media ($desktop) {
 
-		&:hover {
+        &:hover {}
 
+    }
 
-		}
+    &--yellow {
 
-	}
+        color: var(--black);
+        background-color: var(--yellow);
 
-	&--yellow {
+        @media ($desktop) {
 
-		color: var(--black);
-		background-color: var(--yellow);
+            &:hover {
 
-		@media ($desktop) {
+                /* background-color: #524BE0; */
 
-			&:hover {
+            }
 
-				/* background-color: #524BE0; */
+        }
 
-			}
-
-		}
-
-	}
+    }
 
 }

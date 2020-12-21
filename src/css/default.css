@@ -34,7 +34,7 @@ body {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-y: auto;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 

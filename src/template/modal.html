@@ -1,0 +1,45 @@
+<div class="modal" id="request-demo-modal">
+    <div class="modal-inner">
+        <h2 class="modal__title">Request a Demo</h2>
+        <button class="modal__close" onclick="closeModal('request-demo-modal')">
+            <img src="../img/close.svg" alt="">
+        </button>
+        <form class="modal-form" id="modal-form">
+            <div class="modal-form-row">
+                <div class="modal-form__input">
+                    <input type="text" name="first-name" id="first-name">
+                    <label class="modal-form__input-label" for="first-name">First Name*</label>
+                </div>
+                <div class="modal-form__input">
+                    <input type="text" name="last-name" id="last-name">
+                    <label class="modal-form__input-label" for="last-name">Last Name*</label>
+                </div>
+            </div>
+            <div class="modal-form__input">
+                <input type="text" name="job" id="job">
+                <label class="modal-form__input-label" for="job">Job Title</label>
+            </div>
+            <div class="modal-form-row">
+                <div class="modal-form__input">
+                    <input type="email" name="email" id="email">
+                    <label class="modal-form__input-label" for="email">Email*</label>
+                </div>
+                <div class="modal-form__input">
+                    <div class="custom-select">
+                        <select name="size" id="size">
+                            <option>Below 50</option>
+                            <option>50-99</option>
+                            <option>100-249</option>
+                            <option>250-499</option>
+                            <option>500+</option>
+                        </select>
+                        <span class="arrow"></span>
+                        <label class="modal-form__input-label" for="size">Company Size</label>
+                    </div>
+                </div>
+            </div>
+            <p class="modal-form__result" id="modal-form-result"></p>
+            <button class="btn btn--yellow modal-form__btn" type="submit">Book your demo now</button>
+        </form>
+    </div>
+</div>
